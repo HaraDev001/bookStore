@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto:thin,extra-light,light,100,200,300,400,500,600,700,800');
+
+// Fonts
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+// Colors
+$azure: #0290ff;
+$coolBlue: #4386bf;
+$greyBorder: #e8e8e8;
+$pinkishGrey: #c4c4c4;
+$warmGrey: #888;
+$paleGrey: #fafafa;
+
+// General padding
+$generalPadding: 0 4rem;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $paleGrey;
+  margin: 0;
+  font-family: $montserrat;
+}
+
+button {
+  font-family: $roboto;
+}
+
+//NAVBAR
+header {
+  background-color: #fff;
+}
+
+.navbar {
+  height: 5.938rem;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2.313rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align {
+  text-align: center;
+}
+
+.nav-title {
+  color: $azure;
+  font-size: 1.875rem;
+}
+
+.books,
+.categories {
+  font-size: 0.813rem;
+  text-decoration: none;
+}
+
+.books {
+  margin-right: 2.563rem;
+  color: #121212;
+}
+
+.categories {
+  color: $warmGrey;
+}
+
+.oval {
+  align-items: center;
+  justify-content: center;
+  width: 2.813rem;
+  height: 2.813rem;
+  padding: 0.875rem 1rem 0.875rem 0.875rem;
+  border: 1px solid $greyBorder;
+  border-radius: 75px;
+  margin-left: 20.5rem;
+}
+
+.mask {
+  width: 1.063rem;
+  height: 1.063rem;
+  color: $azure;
+  margin-right: 0.9rem;
+}
+
+.circle-wrap {
+  margin: 5px 0;
+  width: 150px;
+  height: 150px;
+  background: #fafafa;
+  border-radius: 50%;
+  border: 1px solid #fafafa;
+  transform: scale(0.6);
+}
+
+.mask .fill {
+  clip: rect(0, 76px, 150px, 0);
+  background-color: #227ded;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0, 150px, 150px, 75px);
+}
+
+.circle-wrap .inside-circle {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 120px;
+  margin-top: 14px;
+  margin-left: 14px;
+  color: #1e51dc;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.middleSide {
+  justify-content: center;
+  align-items: center;
+}
+
+.percentageText {
+  text-align: left;
+  flex-direction: column;
+}
+
+.percentage {
+  width: 4.25rem;
+  height: 2.438rem;
+  font-family: $montserrat;
+  font-size: 2rem;
+  color: #121212;
+  margin-bottom: 0;
+}
+
+.completedP {
+  font-family: $montserrat;
+  font-size: 0.985rem;
+  color: $warmGrey;
+  margin-bottom: 2rem;
+  margin-top: -0.2rem;
+}
+
+.line2 {
+  width: 0.125rem;
+  height: 5rem;
+  border: 1px solid $greyBorder;
+  margin: 2.5rem 0 1.813rem 0;
+}
+
+//BOOKITEM
+.bookItem {
+  background-color: #fff;
+  height: 10.625rem;
+  border: 1px solid $greyBorder;
+  margin: 0.913rem 6.25rem;
+  border-radius: 4px;
+  justify-content: space-between;
+  padding: 1rem 6.188rem 1.625rem 1rem;
+  align-items: center;
+}
+
+.book {
+  float: inline-start;
+  text-align: left;
+}
+
+.category {
+  color: $warmGrey;
+}
+
+.bookTitle {
+  color: #121212;
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: 1.575rem;
+}
+
+.bookAuthor,
+.onBook,
+.remove {
+  color: $coolBlue;
+  font-weight: 300;
+  font-size: 0.875rem;
+  font-family: $roboto;
+}
+
+.onBook,
+.remove {
+  background-color: #fff;
+  border: none;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+}
+
+.remove {
+  border-left: 1.5px solid $greyBorder;
+  border-right: 1px solid $greyBorder;
+  padding: 0 0.9rem;
+}
+
+//PROGRESS
+
+.chapterHeading {
+  color: $warmGrey;
+  font-family: $roboto;
+  font-size: 0.913rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-left: -2.5rem;
+}
+
+.chapter {
+  color: #121212;
+  font-weight: 300;
+  font-family: $roboto;
+  font-size: 1rem;
+  margin-left: -6.5rem;
+}
+
+.progress {
+  background-color: $azure;
+  color: #fff;
+  font-weight: 300;
+  font-size: 0.913rem;
+  border: none;
+  border-radius: 3px;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+}
+
+.comment {
+  margin-left: -0.45rem;
+}
+
+//ADD BOOK
+
+div .line {
+  width: 70rem;
+  height: 0.125rem;
+  border: 1px solid $greyBorder;
+  margin: 2.5rem 4rem 1.813rem 5.9rem;
+}
+
+.adding {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 6.25rem;
+}
+
+.new-title,
+.category-heading {
+  color: $warmGrey;
+  font-family: $montserrat;
+  font-size: 1.25rem;
+  height: 1.5rem;
+  margin-top: 0.513rem;
+}
+
+form {
+  padding-bottom: 15rem;
+}
+
+input[type=text] {
+  width: 26.6rem;
+  height: 2.813rem;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid $greyBorder;
+  color: #000;
+  font-size: 1rem;
+  padding-left: 1rem;
+  margin-right: 2.125rem;
+}
+
+::placeholder {
+  color: $pinkishGrey;
+}
+
+.addbtn,
+.statusbtn {
+  background-color: $azure;
+  color: #fff;
+  font-size: 0.913rem;
+  border: none;
+  border-radius: 3px;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  font-weight: bold;
+  font-family: $roboto;
+  height: 2.813rem;
+  width: 11.5rem;
+}
